@@ -7,6 +7,7 @@ soup = BeautifulSoup(res.text,'lxml')
 unedited = soup.select('.x-price-primary > .ux-textspans')[0].text[4:]
 actual_price = float(unedited)
 my_price = 1000
+
 if actual_price < my_price:
     print("The price is below your budget, go grab them")
     
